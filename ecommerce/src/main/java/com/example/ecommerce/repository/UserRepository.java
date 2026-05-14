@@ -3,6 +3,9 @@ package com.example.ecommerce.repository;
 import com.example.ecommerce.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Optional;
+
 public interface UserRepository extends JpaRepository<User, Long> {
     // Additional query methods can be defined here if needed
+    Optional<User> findByName(String name);
 }
